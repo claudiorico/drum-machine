@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC: Drum Machine</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </head>
+  <body class="container">
+    <div class="drum-container" id="drum-machine">
+      <div class="drum-pad-container">
+        <div class="drum-pad" id="padQ" onclick="{onPadClick('Q')}">
+          <audio src="audio/Heater-1.mp3" class="clip" id="Q"></audio>Q
+        </div>
+        <div class="drum-pad" id="padW" onclick="{onPadClick('W')}">
+          <audio src="audio/Heater-2.mp3" class="clip" id="W"></audio>W
+        </div>
+        <div class="drum-pad" id="padE" onclick="{onPadClick('E')}">
+          <audio src="audio/Heater-3.mp3" class="clip" id="E"></audio>E
+        </div>
+        <div class="drum-pad" id="padA" onclick="{onPadClick('A')}">
+          <audio src="audio/Heater-4_1.mp3" class="clip" id="A"></audio>A
+        </div>
+        <div class="drum-pad" id="padS" onclick="{onPadClick('S')}">
+          <audio src="audio/Heater-6.mp3" class="clip" id="S"></audio>S
+        </div>
+        <div class="drum-pad" id="padD" onclick="{onPadClick('D')}">
+          <audio src="audio/Kick_n_Hat.mp3" class="clip" id="D"></audio>D
+        </div>
+        <div class="drum-pad" id="padZ" onclick="{onPadClick('Z')}">
+          <audio src="audio/RP4_KICK_1.mp3" class="clip" id="Z"></audio>Z
+        </div>
+        <div class="drum-pad" id="padX" onclick="{onPadClick('X')}">
+          <audio src="audio/Cev_H2.mp3" class="clip" id="X"></audio>X
+        </div>
+        <div class="drum-pad" id="padC" onclick="{onPadClick('C')}">
+          <audio src="audio/Dsc_Oh.mp3" class="clip" id="C"></audio>C
+        </div>
+      </div>
+      <div class="options-container">
+        <p>Power</p>
+        <div class="background-button">
+          <div class="button-switch" id="powerOn"></div>
+          <div class="button-switch" id="powerOff"></div>
+        </div>
+        <div id="display">Heater Kit</div>
+        <div class="input-range">
+          <input
+            type="range"
+            name="volume"
+            id="iVolume"
+            max="1"
+            min="0"
+            step="0.01"
+            oninput="display.innerText = this.value * 100"
+          />
+        </div>
+        <div>Bank</div>
+        <div class="background-button">
+          <div class="button-switch" id="bankOn"></div>
+          <div class="button-switch" id="bankOff"></div>
+        </div>
+      </div>
+    </div>
+    <script src="audios.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
